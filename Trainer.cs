@@ -1,21 +1,21 @@
 namespace Knightmoves.KnightLight.Trainer;
 
 public class Trainer{
-    public string Listen(Animal[] animals) {
+    public string Listen(object[] animals) {
         string sounds = "";
 
-        foreach(Animal animal in animals){
-            if(typeof(Cat).IsInstanceOfType(animal))
+        foreach(object animal in animals){
+            if(typeof(Cat.Cat).IsInstanceOfType(animal))
             {
-                sounds += ((Cat) animal).Say() + ", ";
+                sounds += ((Cat.Cat) animal).Say() + ", ";
             } 
-            else if (typeof(Dog).IsInstanceOfType(animal))
+            else if (typeof(Dog.Dog).IsInstanceOfType(animal))
             {   
-                sounds += ((Dog) animal).Talk() + ", ";
+                sounds += ((Dog.Dog) animal).Talk() + ", ";
             } 
-            else if (typeof(Bird).IsInstanceOfType(animal))
+            else if (typeof(Bird.Bird).IsInstanceOfType(animal))
             {
-                sounds += ((Bird) animal).Sing() + ", ";
+                sounds += ((Bird.Bird) animal).Sing() + ", ";
             }
         }
 
